@@ -36,7 +36,7 @@ function currentSlide(s) {
         bannerTexts[i].style.display = "none";
         bannerTexts[i].style.opacity = 0;
     }
-    banner.style.backgroundImage = "url('../images/banner-example-" + s + ".jpg')";
+    banner.style.backgroundImage = "url('./images/banner-example-" + s + ".jpg')";
     bannerTexts[n].style.display = "inherit";
     bannerTexts[n].style.opacity = 1;
 
