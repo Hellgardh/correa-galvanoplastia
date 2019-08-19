@@ -1,33 +1,59 @@
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- <link rel="preload" as="font" href="fonts/big_noodle_titling-webfont.woff" type="font/woff" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <link rel="preload" as="font" href="fonts/big_noodle_titling-webfont.woff" type="font/woff" crossorigin="anonymous">
   <link rel="preload" as="font" href="fonts/big_noodle_titling-webfont.woff2" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" as="font" href="fonts/big_noodle_titling-webfont.ttf" type="font/ttf" crossorigin="anonymous"> -->
-  <link rel="stylesheet" href="styles/style.css">
-  <title>Corrêa Galvanoplastia</title>
-</head>
+    <link rel="preload" href="images/banner-example-1.jpg" as="image">
+    <link rel="preload" href="images/banner-example-2.jpg" as="image">
+    <link rel="preload" href="images/banner-example-3.jpg" as="image">  
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Corrêa Galvanoplastia</title>
+  </head>
 
-<body>
-  <nav>
-    <div class="menu container">
-      <a href="index.html" class="logo">
-        <img src="images/logo-branco.png" alt="" class="logo"> <!-- Colocar link da imagem-->
-      </a>
-      <a href="quem-somos.html" class="menu-item">Quem somos</a>
-      <a href="linhas-de-banho.html" class="menu-item">Linhas de Banho</a>
-      <a href="contato.html" class="menu-item">Contato</a>
+  <body>
+    <nav>
+      <div class="menu container">
+        <a href="index.html" class="logo">
+          <img src="images/logo-branco.png" alt="" class="logo" />
+          <!-- Colocar link da imagem-->
+        </a>
+        <a href="quem-somos.html" class="menu-item">Quem somos</a>
+        <a href="linhas-de-banho.html" class="menu-item">Linhas de Banho</a>
+        <a href="contato.html" class="menu-item">Contato</a>
+      </div>
+    </nav>
+
+    <!-- <div class="banner container">
+      <div class="slide">
+        <p>Texto falando sobre e empresa</p>
+      </div>
+      <div class="slide">
+        <p>Texto falando sobre e empresa</p>
+      </div>
+      <div class="slide">
+        <p>Texto falando sobre e empresa</p>
+      </div>
+      <div class="banner-buttons">
+        <span class="banner-button" onclick="currentSlide(1)"></span>
+        <span class="banner-button" onclick="currentSlide(2)"></span>
+        <span class="banner-button" onclick="currentSlide(3)"></span>
+      </div>
+    </div> -->
+
+    <div class="banner-test container">
+      <p class="banner-text">Texto falando sobre a empresa</p>
+      <p class="banner-text">Texto falando sobre outra coisa</p>
+      <p class="banner-text">Texto falando sobre textos</p>
+      <div class="banner-buttons">
+          <span class="banner-button" onclick="currentSlide(1)"></span>
+          <span class="banner-button" onclick="currentSlide(2)"></span>
+          <span class="banner-button" onclick="currentSlide(3)"></span>
+        </div>
     </div>
-  </nav>
-  <div class="teste">
-    <p>Hello World!!!</p>
-  </div>
-  <div class="teste">
-    <a href="">Testando live server</a>
-  </div>
-</body>
 
+    <script src="scripts/slider.js"></script>
+  </body>
 </html>
