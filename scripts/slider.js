@@ -23,13 +23,18 @@
 //     buttons[n].style.backgroundColor = "#ff2020";
 // }
 
-var banner = document.querySelector(".banner-test");
+var banner = document.querySelector(".banner");
 var bannerTexts = document.querySelectorAll(".banner-text");
 var buttons = document.querySelectorAll(".banner-button");
+
+var canChange = true;;
 
 currentSlide(1);
 
 function currentSlide(s) {
+    if(!canChange) return;
+    canChange = false;
+    
     n = (parseInt(s) - 1);
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].style.backgroundColor = "gray";
@@ -41,4 +46,9 @@ function currentSlide(s) {
     bannerTexts[n].style.opacity = 1;
 
     buttons[n].style.backgroundColor = "#ff2020";
+
+    window.setTimeout(function(){
+        canChange = true;   
+    }, 1000);
+
 }
