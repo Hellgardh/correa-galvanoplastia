@@ -49,10 +49,14 @@ a:link {
 }
 
 .wrapper {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+
 }
 
 .menu {
@@ -114,7 +118,7 @@ a:link {
   /* overflow: hidden; */
   width: 80%;
   height: 600px;
-  background-image: url("../images/banner-example-1.jpg");
+  background-image: url("images/banner-example-1.jpg");
   background: no-repeat center;
   background-size: cover;
   display: -webkit-box;
@@ -169,6 +173,11 @@ a:link {
 .teste:nth-of-type(2) {
   background-color: gray;
   color: white;
+}
+
+.img-teste {
+  width: 25%;
+  margin: 0 auto;
 }
 
 @-webkit-keyframes fadeIn {
