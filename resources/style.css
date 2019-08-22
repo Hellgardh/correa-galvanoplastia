@@ -118,7 +118,7 @@ a:link {
   /* overflow: hidden; */
   width: 80%;
   height: 600px;
-  background-image: url("resources/images/banner-example-1.jpg");
+  background-image: url("images/banner-example-1.jpg");
   background: no-repeat center;
   background-size: cover;
   display: -webkit-box;
@@ -137,6 +137,9 @@ a:link {
   -webkit-transition: background-image 1s ease-in-out;
   -moz-transition: background-image 1s ease-in-out;
   transition: background-image 1s ease-in-out;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
   user-select: none;
 }
 
