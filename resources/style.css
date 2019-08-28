@@ -22,7 +22,7 @@ html {
 
 h1 {
   text-align: center;
-  font-size: 38px;
+  font-size: 46px;
 }
 
 h2 {
@@ -125,6 +125,10 @@ a:visited {
 .logo {
   width: 50px;
   height: 50px;
+}
+
+.banner-background {
+  background-color: #e4e3e3;
 }
 
 .banner-button {
@@ -234,6 +238,10 @@ a:visited {
   background-size: cover;
 }
 
+#setores-headline {
+  border-bottom: 1px solid #ff2020;
+}
+
 .setores {
   width: 60%;
   margin-top: 50px;
@@ -268,7 +276,7 @@ a:visited {
 }
 
 .setor:hover {
-  border-color: rgba(128, 128, 128, 0.2);
+  border-color: rgba(128, 128, 128, 0.1);
 }
 
 .setor h3 {
