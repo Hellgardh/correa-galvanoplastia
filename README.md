@@ -3,7 +3,7 @@ O site pode ser acessado nesse link: https://hellgardh.github.io/correa-galvanop
 
 ## Tabela de Conteúdo:
 * [Status](#status)
-* [Atualizações](#atualizacoes)
+* [Atualizações](#atualizações)
 * [Versionamento](#versionamento)
 
 ## Status
