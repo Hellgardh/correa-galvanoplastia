@@ -7,7 +7,7 @@ O site pode ser acessado nesse link: https://hellgardh.github.io/correa-galvanop
 * [Versionamento](#versionamento)
 
 ## Status
-Terminando de implementar o slider horizontal da seção "Setores" na página inicial, e melhorando o seu UX.
+Refazendo o banner da página inicial para maior compatibilidade com outros browsers
 
 # Changelog
 
