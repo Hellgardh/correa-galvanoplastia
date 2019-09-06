@@ -28,7 +28,7 @@ Terminando de implementar o slider horizontal da seção "Setores" na página in
 * A navbar agora é responsiva
 * A pasta imagens do projeto foi reorganizada
 
-### Versão 1.3.2
+## Versão 1.3.2
 * Adicionado slider horizontal na seção de "Setores", ao chegar na resolução Mobile
 * Correções de vários bugs dessa implementação no Internet Explorer 11
 * O site agora também está adaptado para o Opera
