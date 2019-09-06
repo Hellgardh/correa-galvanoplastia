@@ -9,9 +9,11 @@ O site pode ser acessado nesse link: https://hellgardh.github.io/correa-galvanop
 ## Status
 Terminando de implementar o slider horizontal da seção "Setores" na página inicial, e melhorando o seu UX.
 
-## Changelog
+# Changelog
+
 
 ## Versão 1.4.1
+
 ### Implementações
 * Agora a seção de setores está adaptada para o mobile, onde você arrasta para o lado para ver os setores. Além disso, ele possui um ui embaixo mostrando se ainda há conteúdo na direita/esquerda da posição atual
 * Agora o site possui o nome da empresa junto com o logo na navbar
@@ -29,6 +31,7 @@ Terminando de implementar o slider horizontal da seção "Setores" na página in
 * A pasta imagens do projeto foi reorganizada
 
 ## Versão 1.3.2
+
 * Adicionado slider horizontal na seção de "Setores", ao chegar na resolução Mobile
 * Correções de vários bugs dessa implementação no Internet Explorer 11
 * O site agora também está adaptado para o Opera
