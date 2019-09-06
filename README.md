@@ -11,7 +11,6 @@ Terminando de implementar o slider horizontal da seção "Setores" na página in
 
 # Changelog
 
-
 ## Versão 1.4.1
 
 ### Implementações
