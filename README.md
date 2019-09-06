@@ -16,11 +16,11 @@ Terminando de implementar o slider horizontal da seção "Setores" na página in
 * Correções de vários bugs dessa implementação no Internet Explorer 11
 * O site agora também está adaptado para o Opera
 
-##Versão 1.4.1
-###Implementações
+## Versão 1.4.1
+### Implementações
 * Agora a seção de setores está adaptada para o mobile, onde você arrasta para o lado para ver os setores. Além disso, ele possui um ui embaixo mostrando se ainda há conteúdo na direita/esquerda da posição atual
 * Agora o site possui o nome da empresa junto com o logo na navbar
-###Alterações
+### Alterações
 * Alterada fonte do .home-links
 * Corrigido bug do Opera que fazia com que a horizontal slider tivesse um scroll vertical
 * Corrigido bug do Firefox onde aparecia um horizontal slider
