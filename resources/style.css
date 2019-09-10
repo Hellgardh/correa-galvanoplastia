@@ -494,8 +494,8 @@ a:visited {
     -webkit-overflow-scrolling: touch;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
-    -webkit-transform: scale(0.96);
-    transform: scale(0.96);
+    -webkit-transform: scale(0.94);
+    transform: scale(0.94);
     -ms-overflow-style: none;
     -webkit-user-select: none;
     -moz-user-select: none;

@@ -57,12 +57,10 @@ slider.addEventListener("mousemove", function(e) {
 
 //Mobile
 slider.addEventListener("touchstart", function() {
-  touchTeste.innerHTML = "Começou o touch";
   slider.classList.add("active");
   changeArrowsDisplay();
 }), false;
 slider.addEventListener("touchend", function() {
-  touchTeste.innerHTML = "Terminou o touch";
   slider.classList.remove("active");
   changeArrowsDisplay();
 }), false;
@@ -78,10 +76,3 @@ function changeArrowsDisplay() {
     arrowL.style.opacity = 0;
   }
 }
-
-scrollTeste = document.querySelector("#teste-scroll");
-touchTeste = document.querySelector("#teste-touch");
-
-window.setInterval(function() {
-  scrollTeste.innerHTML = slider.scrollLeft;
-}, 100);
