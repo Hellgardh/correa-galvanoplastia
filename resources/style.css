@@ -465,8 +465,20 @@ a:visited {
     font-size: 26px;
   }
 
+  .home-link {
+    padding-top: 8px;
+  }
+
+  #quem-somos {
+    height: 70px;
+  }
+
   #orcamento {
-    height: 100px;
+    height: 90px;
+  }
+
+  #linhas-de-banho {
+    height: 90px;
   }
 
   .setores {

@@ -55,6 +55,18 @@ slider.addEventListener("mousemove", function(e) {
   slider.scrollLeft = scrollLeft - walk;
 });
 
+//Mobile
+slider.addEventListener("touchstart", function() {
+  touchTeste.innerHTML = "Começou o touch";
+  slider.classList.add("active");
+  changeArrowsDisplay();
+}), false;
+slider.addEventListener("touchend", function() {
+  touchTeste.innerHTML = "Terminou o touch";
+  slider.classList.remove("active");
+  changeArrowsDisplay();
+}), false;
+
 function changeArrowsDisplay() {
   for (let i = 0; i < arrows.length; i++) {
     arrows[i].style.opacity = 0.7;
@@ -67,4 +79,9 @@ function changeArrowsDisplay() {
   }
 }
 
-console.log(slider.scrollLeft);
+scrollTeste = document.querySelector("#teste-scroll");
+touchTeste = document.querySelector("#teste-touch");
+
+window.setInterval(function() {
+  scrollTeste.innerHTML = slider.scrollLeft;
+}, 100);
