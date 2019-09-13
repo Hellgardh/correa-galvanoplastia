@@ -1,237 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- <link rel="preload" as="font" href="fonts/big_noodle_titling-webfont.woff" type="font/woff" crossorigin="anonymous">
-  <link rel="preload" as="font" href="fonts/big_noodle_titling-webfont.woff2" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" as="font" href="fonts/big_noodle_titling-webfont.ttf" type="font/ttf" crossorigin="anonymous"> -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap"
-      rel="stylesheet"
-    />
 
-    <link
-      rel="preload"
-      href="resources/images/banner/banner-example-1.jpg"
-      as="image"
-    />
-    <link
-      rel="preload"
-      href="resources/images/banner/banner-example-2.jpg"
-      as="image"
-    />
-    <link
-      rel="preload"
-      href="resources/images/banner/banner-example-3.jpg"
-      as="image"
-    />
-    <link rel="stylesheet" href="resources/style.css" />
-    <title>Corrêa Galvanoplastia</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <body>
-    <nav>
-      <div class="menu container">
-        <a href="index.html" class="logo">
-          <img src="resources/images/logo-branco.png" alt="" class="logo" />
-          <div class="logotipo">
-            <h3>Corrêa</h3>
-            <h3>Galvanoplastia</h3>
-          </div>
+  <link rel="shortcut icon" type="image/x-icon" href="resources/favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet" />
+
+  <link rel="preload" href="resources/images/banner/banner-example-1.jpg" as="image" />
+  <link rel="preload" href="resources/images/banner/banner-example-2.jpg" as="image" />
+  <link rel="preload" href="resources/images/banner/banner-example-3.jpg" as="image" />
+  <link rel="stylesheet" href="resources/style.css" />
+  <title>Corrêa Galvanoplastia</title>
+</head>
+
+<body>
+  <nav>
+    <div class="menu container">
+      <a href="index.html" class="logo">
+        <img src="resources/images/logo-branco.png" alt="" class="logo" />
+        <div class="logotipo">
+          <h3>Corrêa</h3>
+          <h3>Galvanoplastia</h3>
+        </div>
+      </a>
+      <div class="menu-items">
+        <a href="quem-somos.html" class="menu-item">Quem somos</a>
+        <a href="linhas-de-banho.html" class="menu-item">Linhas de Banho</a>
+        <a href="contato.html" class="menu-item">Contato</a>
+      </div>
+      <div class="menu-button">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner-background">
+    <div class="banner container">
+      <p class="banner-text">Texto falando sobre a empresa</p>
+      <p class="banner-text">Texto falando sobre outra coisa</p>
+      <p class="banner-text">Texto falando sobre textos</p>
+      <div class="banner-buttons">
+        <span class="banner-button" onclick="changeSlide(1)"></span>
+        <span class="banner-button" onclick="changeSlide(2)"></span>
+        <span class="banner-button" onclick="changeSlide(3)"></span>
+      </div>
+    </div>
+  </div>
+
+  <div id="home-links" class="container">
+    <a class="home-link" id="quem-somos" href="#">
+      <h2>Quem somos</h2>
+    </a>
+    <a class="home-link" id="linhas-de-banho" href="#">
+      <h2>Linhas de banho</h2>
+    </a>
+    <a class="home-link" id="orcamento" href="#">
+      <h2>Faça seu orçamento</h2>
+    </a>
+  </div>
+
+  <h1>Nós atuamos nos seguintes setores:</h1>
+  <div class="setores">
+    <div class="setor-content">
+      <div class="setor">
+        <img class="setor-img" src="resources/images/setores/Eletronico.svg" alt="" />
+        <h3>Setor <span class="bold">Eletrônico</span></h3>
+      </div>
+    </div>
+    <div class="setor-content">
+      <div class="setor">
+        <img class="setor-img" src="resources/images/setores/Musical.svg" alt="" />
+        <h3><span class="bold">Instrumentos Musicais</span></h3>
+      </div>
+    </div>
+    <div class="setor-content">
+      <div class="setor">
+        <img class="setor-img" src="resources/images/setores/Car.svg" alt="" />
+        <h3>Setor <span class="bold">Automotivo</span></h3>
+      </div>
+    </div>
+    <div class="setor-content">
+      <div class="setor">
+        <img class="setor-img" src="resources/images/setores/Industria-Geral.svg" alt="" />
+        <h3>Setor <span class="bold">Industrial</span></h3>
+      </div>
+    </div>
+    <div class="setor-content">
+      <div class="setor">
+        <img class="setor-img" src="resources/images/setores/Industria-Mecanica.svg" alt="" />
+        <h3>Indústria <span class="bold">Mecânica</span></h3>
+      </div>
+    </div>
+    <div class="setor-content">
+      <div class="setor">
+        <img class="setor-img" src="resources/images/setores/Telecomunicacoes.svg" alt="" />
+        <h3>Setor de <span class="bold">Telecomunicações</span></h3>
+      </div>
+    </div>
+    <div class="setor-content">
+      <div class="setor">
+        <img class="setor-img" src="resources/images/setores/Brindes.svg" alt="" />
+        <h3><span class="bold">Brindes em Geral</span></h3>
+      </div>
+    </div>
+  </div>
+  <div class="setores-ui">
+    <img src="resources/images/icons/arrow-alt-circle-right-regular.svg" class="arrow" />
+    <img src="resources/images/icons/arrows-alt-h-solid.svg" class="drag-arrow" />
+    <img src="resources/images/icons/arrow-alt-circle-right-regular.svg" class="arrow" />
+  </div>
+  <h1 class="nossos-clientes">Nossos Clientes</h1>
+  <div class="clientes container">
+    <img src="resources/images/logo.svg" class="cliente" />
+    <img src="resources/images/logo.svg" class="cliente" />
+    <img src="resources/images/logo.svg" class="cliente" />
+    <img src="resources/images/logo.svg" class="cliente" />
+  </div>
+  <div id="ft-line"></div>
+  <footer>
+    <div class="ft-element" id="map-ft">
+      <img src="resources/images/footer/map-marked-alt-solid.svg" class="ft-icon" />
+      <div id="map-info">
+        <p class="ft-info">
+          <span class="label">Rua Desembargador Galvão, 68,</span>
+          <span class="label-after">Jardim São Paulo | São Paulo - SP</span>
+        </p>
+        <a id="map-a"
+          href=https://www.google.com/maps/place/Corr%C3%AAa+Galvanoplastia/@-23.46676,-46.5684709,15z/data=!4m5!3m4!1s0x0:0x2d0c99125940eec2!8m2!3d-23.46676!4d-46.5684709">
+          <button id="map-btn">Ver no Mapa</button>
         </a>
-        <div class="menu-items">
-          <a href="quem-somos.html" class="menu-item">Quem somos</a>
-          <a href="linhas-de-banho.html" class="menu-item">Linhas de Banho</a>
-          <a href="contato.html" class="menu-item">Contato</a>
-        </div>
-        <div class="menu-button">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </div>
       </div>
-    </nav>
-
-    <div class="banner-background">
-      <div class="banner container">
-        <p class="banner-text">Texto falando sobre a empresa</p>
-        <p class="banner-text">Texto falando sobre outra coisa</p>
-        <p class="banner-text">Texto falando sobre textos</p>
-        <div class="banner-buttons">
-          <span class="banner-button" onclick="changeSlide(1)"></span>
-          <span class="banner-button" onclick="changeSlide(2)"></span>
-          <span class="banner-button" onclick="changeSlide(3)"></span>
-        </div>
-      </div>
-    </div>
-
-    <div id="home-links" class="container">
-      <a class="home-link" id="quem-somos" href="#">
-        <h2>Quem somos</h2>
-      </a>
-      <a class="home-link" id="linhas-de-banho" href="#">
-        <h2>Linhas de banho</h2>
-      </a>
-      <a class="home-link" id="orcamento" href="#">
-        <h2>Faça seu orçamento</h2>
-      </a>
-    </div>
-
-    <h1>Nós atuamos nos seguintes setores:</h1>
-    <div class="setores">
-      <div class="setor-content">
-        <div class="setor">
-          <img
-            class="setor-img"
-            src="resources/images/setores/Eletronico.svg"
-            alt=""
-          />
-          <h3>Setor <span class="bold">Eletrônico</span></h3>
-        </div>
-      </div>
-      <div class="setor-content">
-        <div class="setor">
-          <img
-            class="setor-img"
-            src="resources/images/setores/Musical.svg"
-            alt=""
-          />
-          <h3><span class="bold">Instrumentos Musicais</span></h3>
-        </div>
-      </div>
-      <div class="setor-content">
-        <div class="setor">
-          <img
-            class="setor-img"
-            src="resources/images/setores/Car.svg"
-            alt=""
-          />
-          <h3>Setor <span class="bold">Automotivo</span></h3>
-        </div>
-      </div>
-      <div class="setor-content">
-        <div class="setor">
-          <img
-            class="setor-img"
-            src="resources/images/setores/Industria-Geral.svg"
-            alt=""
-          />
-          <h3>Setor <span class="bold">Industrial</span></h3>
-        </div>
-      </div>
-      <div class="setor-content">
-        <div class="setor">
-          <img
-            class="setor-img"
-            src="resources/images/setores/Industria-Mecanica.svg"
-            alt=""
-          />
-          <h3>Indústria <span class="bold">Mecânica</span></h3>
-        </div>
-      </div>
-      <div class="setor-content">
-        <div class="setor">
-          <img
-            class="setor-img"
-            src="resources/images/setores/Telecomunicacoes.svg"
-            alt=""
-          />
-          <h3>Setor de <span class="bold">Telecomunicações</span></h3>
-        </div>
-      </div>
-      <div class="setor-content">
-        <div class="setor">
-          <img
-            class="setor-img"
-            src="resources/images/setores/Brindes.svg"
-            alt=""
-          />
-          <h3><span class="bold">Brindes em Geral</span></h3>
-        </div>
-      </div>
-    </div>
-    <div class="setores-ui">
-      <img
-        src="resources/images/icons/arrow-alt-circle-right-regular.svg"
-        class="arrow"
-      />
-      <img
-        src="resources/images/icons/arrows-alt-h-solid.svg"
-        class="drag-arrow"
-      />
-      <img
-        src="resources/images/icons/arrow-alt-circle-right-regular.svg"
-        class="arrow"
-      />
-    </div>
-    <h1 class="nossos-clientes">Nossos Clientes</h1>
-    <div class="clientes container">
-      <img src="resources/images/logo.svg" class="cliente" />
-      <img src="resources/images/logo.svg" class="cliente" />
-      <img src="resources/images/logo.svg" class="cliente" />
-      <img src="resources/images/logo.svg" class="cliente" />
-    </div>
-    <footer>
-      <div class="ft-element" id="map-ft">
-        <div class="map-info">
-          <img
-            src="resources/images/footer/map-marked-alt-solid.svg"
-            class="ft-icon"
-          />
-          <p class="ft-info">
-            Rua Desembargador Galvão, 68, Jardim São Paulo | São Paulo - SP
-          </p>
-        </div>
-        <a id="map-a" href=https://www.google.com/maps/place/Corr%C3%AAa+Galvanoplastia/@-23.46676,-46.5684709,15z/data=!4m5!3m4!1s0x0:0x2d0c99125940eec2!8m2!3d-23.46676!4d-46.5684709">
+      <!-- <a id="map-a" href=https://www.google.com/maps/place/Corr%C3%AAa+Galvanoplastia/@-23.46676,-46.5684709,15z/data=!4m5!3m4!1s0x0:0x2d0c99125940eec2!8m2!3d-23.46676!4d-46.5684709">
           <button class="map-btn">Ver no Mapa</button>
-        </a> 
-      </div>
-      <div class="ft-element" id="phone-ft">
-        <img
-          src="resources/images/footer/phone-alt-solid.svg"
-          class="ft-icon"
-        />
-        <p class="ft-info">
-          <span class="label">(11) 2241 - 0461</span>
-          <span class="label-after">(11) 2241 - 0106</span>
-        </p>
-        <a href="linkedin" class="ft-social">
-          <img
-            src="resources/images/footer/linkedin-brands.svg"
-            class="ft-icon"
-          />
-        </a>
-        <a
-          href="https://www.facebook.com/pages/Correa-Galvanoplastia-Ltda/199669663384708"
-          class="ft-social"
-        >
-          <img
-            src="resources/images/footer/facebook-square-brands.svg"
-            class="ft-icon"
-          />
-        </a>
-      </div>
-      <div class="ft-element" id="mail-ft">
-        <img src="resources/images/footer/envelope-solid.svg" class="ft-icon" />
-        <p class="ft-info">
-          <span class="label">Entre em contato</span>
-          <span class="label-after"
-            ><a
-              href="mailto:vendas@correagalvanoplastia.com.br"
-              class="mail-link"
-              >vendas@correagalvanoplastia.com.br</a
-            ></span
-          >
-        </p>
-      </div>
-    </footer>
+        </a>  -->
+    </div>
+    <div class="ft-element" id="phone-ft">
+      <img src="resources/images/footer/phone-alt-solid.svg" class="ft-icon" />
+      <p class="ft-info">
+        <span class="label">(11) 2241 - 0461</span>
+        <span class="label-after">(11) 2241 - 0106</span>
+      </p>
+      <a href="linkedin" class="ft-social">
+        <img src="resources/images/footer/linkedin-brands.svg" class="ft-icon" />
+      </a>
+      <a href="https://www.facebook.com/pages/Correa-Galvanoplastia-Ltda/199669663384708" class="ft-social">
+        <img src="resources/images/footer/facebook-square-brands.svg" class="ft-icon" />
+      </a>
+    </div>
+    <div class="ft-element" id="mail-ft">
+      <img src="resources/images/footer/envelope-solid.svg" class="ft-icon" />
+      <p class="ft-info">
+        <span class="label">Entre em contato</span>
+        <span class="label-after bold"><a href="mailto:vendas@correagalvanoplastia.com.br"
+            class="link-under">vendas@correagalvanoplastia.com.br</a></span>
+      </p>
+    </div>
+  </footer>
 
-    <script src="scripts/banner.js"></script>
-    <script src="scripts/setor-responsivo.js"></script>
-    <!-- <script id="__bs_script__">//<![CDATA[
+  <script src="scripts/banner.js"></script>
+  <script src="scripts/setor-responsivo.js"></script>
+  <!-- <script id="__bs_script__">//<![CDATA[
       document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
   //]]></script> -->
-  </body>
+</body>
+
 </html>

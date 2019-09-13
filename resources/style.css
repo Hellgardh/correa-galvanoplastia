@@ -72,6 +72,17 @@ a:visited {
   background-color: #fb042d;
 }
 
+.label::after {
+  content: "\A";
+  white-space: pre;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.link-under:hover {
+  text-decoration: underline;
+}
+
 .container {
   margin: 0 auto;
   display: -ms-flexbox;
@@ -229,9 +240,6 @@ a:visited {
   height: 600px;
   background-image: url("images/banner-example-1.jpg");
   background: no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
   display: -webkit-box;
@@ -250,11 +258,8 @@ a:visited {
   -webkit-transition: background-image 1s ease-in-out;
   transition: background-image 1s ease-in-out;
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transform: scale(1);
-  -moz-transform: scale(1);
   transform: scale(1);
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -400,111 +405,77 @@ a:visited {
   opacity: 0.6;
 }
 
+#ft-line {
+  width: 100%;
+  height: 5px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+}
+
 footer {
   width: 100%;
-  height: 150px;
-  border-top: solid 2px rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: "Open Sans", sans-serif;
-  flex-wrap: nowrap;
-  font-size: 16px;
 }
 
 .ft-element {
-  width: 350px;
-  height: 150px;
-  /* margin-top: 20px; */
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  margin: 0 40px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 .ft-icon {
   width: 50px;
   height: 50px;
+  padding-top: 8px;
   opacity: 0.7;
 }
 
 .ft-info {
-  width: 250px;
-  margin: 0 0;
   margin-left: 25px;
 }
 
-#map-ft {
-  height: 150px;
-  margin-left: 0;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.map-info {
+#map-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.map-info .ft-info {
-  width: 250px;
-}
-
-#map-a {
-  align-self: center;
-}
-
-.map-btn {
-  width: 125px;
-  height: 35px;
-  margin-top: 10px;
+#map-btn {
   color: white;
   background-color: #fb042d;
   border-radius: 20px;
   border-style: none;
-  font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
-.map-btn:hover {
+#map-btn:hover {
   background-color: #b00320;
   cursor: pointer;
 }
 
-.label::after {
-  content: '\A';
-  white-space: pre;
-  margin: 0 0;
-  padding: 0 0;
-}
-
-#phone-ft {
-  width: 345px;
-  margin-right: 0;
-}
-
 #phone-ft .ft-info {
-  width: 120px;
-  margin: 0 25px;
-}
-
-#mail-ft {
-  width: 375px;
-}
-
-.mail-link:hover {
-  text-decoration: underline;
-}
-
-#mail-ft .ft-info {
-  width: 280px;
+  margin-right: 5px;
 }
 
 .ft-social {
-  width: 40px;
-  /* height: 50px; */
-  margin: 0 10px;
+  margin-left: 10px;
 }
 
 .ft-social .ft-icon {
@@ -695,37 +666,38 @@ footer {
   }
 
   footer {
-    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     font-size: 14px;
   }
 
   .ft-element {
-    width: 90%;
-    margin: 0 5%;
-    justify-content: flex-start;
+    width: 320px;
+    margin: 10px 0;
   }
 
   #map-ft {
-    margin-left: 0;
-    margin: 0 5%;
-    align-items: flex-start;
+    height: 110px;
   }
 
-  .map-btn {
+  #map-btn {
+    width: 105px;
+    height: 35px;
     font-size: 14px;
   }
 
-  #phone-ft {
-    width: 90%;
-    margin: 0 5%;
-  }
-
-  #mail-ft {
-    width: 90%;
-  }
-
-  #phone-ft, #mail-ft {
-    height: 90px;
+  .ft-social {
+    padding-top: 5px;
+    width: 40px;
+    height: 40px;
   }
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -806,38 +778,42 @@ footer {
   }
 
   footer {
-    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 14px;
   }
 
   .ft-element {
-    width: 50%;
-    margin: 0 25%;
-    justify-content: flex-start;
+    width: 320px;
+    margin: 10px 0;
   }
 
   #map-ft {
-    width: 50%;
-    margin-left: 0;
-    margin: 0 25%;
-    align-items: flex-start;
+    height: 110px;
   }
 
-  #map-a {
-    margin-right: 35%;
+  #map-btn {
+    width: 105px;
+    height: 35px;
+    font-size: 14px;
   }
 
-  #phone-ft {
-    width: 50%;
-    margin: 0 25%;
+  .ft-social {
+    padding-top: 5px;
+    width: 40px;
+    height: 40px;
   }
 
   #mail-ft {
-    width: 50%;
-  }
-
-  #phone-ft, #mail-ft {
-    height: 100px;
-    margin: 0 25%;
+    width: 340px;
   }
 }
 
@@ -879,57 +855,25 @@ footer {
   }
 
   footer {
-    flex-wrap: wrap;
-    font-size: 16px;
-    align-items: center;
+    width: 720px;
+    margin: 0 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 
   .ft-element {
-    flex-basis: 50%;
-  }
-
-  #map-ft, #phone-ft, #mail-ft {
-    width: 350px;
-    margin: 0 40px;
-  }
-
-  /* .ft-element {
-    width: 350px;
-    height: 150px;
-    margin: 0 40px;
-  }
-
-  .ft-icon {
-    width: 30px;
-    height: 30px;
-  }
-
-  .ft-info {
-    margin-left: 15px;
-  }
-
-  #map-ft, #phone-ft, #mail-ft {
-    width: 350px;
-    height: 150px;
-    margin: 0 20px;
-  }
-
-  #map-ft {
-    width: 270px;
+    height: 110px;
+    margin: 10px 20px;
   }
 
   #mail-ft {
-    width: 300px;
+    height: 60px;
   }
-
-  #phone-ft .ft-info {
-    margin: 0 10px;
-  }
-
-  .ft-social {
-    width: 25px;
-  } */
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -974,6 +918,52 @@ footer {
     font-size: 28px;
     height: 150px;
   }
+
+  footer {
+    width: 100%;
+    font-size: 16px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .ft-element {
+    height: 120px;
+    width: 330px;
+  }
+
+  .ft-icon {
+    padding-top: 16px;
+  }
+
+  #map-ft {
+    height: 120px;
+  }
+
+  #mail-ft {
+    height: 120px;
+  }
+
+  #map-btn {
+    width: 125px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .ft-social {
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+  }
+
+  .ft-social .ft-icon {
+    padding-top: 8px;
+  }
+
+  #mail-ft {
+    width: 375px;
+    margin-left: 35px;
+  }
 }
 
 @media screen and (min-width: 1800px) {
@@ -988,5 +978,13 @@ footer {
 
   .home-link {
     font-size: 36px;
+  }
+
+  .ft-element {
+    margin: 10px 5%;
+  }
+
+  #mail-ft {
+    margin: 10px 5%;
   }
 }
