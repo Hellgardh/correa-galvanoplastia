@@ -11,6 +11,20 @@ Refazendo o banner da página inicial para maior compatibilidade com outros brow
 
 # Changelog
 
+## Versão 1.5.2
+
+### Implementações
+* Footer totalmente desenvolvido, funcionando em todas as resoluções e navegadores
+* O banner troca de imagem automaticamente
+* As animações do banner agora possuem cross-browsing
+
+### Alterações
+* Ajustado home-links para mobile
+* As setas do slider mobile agora funcionam corretamente
+* Bug na animação de troca de imagem do banner corrigido
+* O código do banner foi totalmente alterado
+* O banner possui uma nova função timer
+
 ## Versão 1.4.1
 
 ### Implementações
