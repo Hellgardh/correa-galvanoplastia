@@ -1,55 +1,82 @@
-var images = new Array();
-for (let i = 0; i < images.length; i++) {
-    const element = images[i];
-    element = new Image();
-    element.src = "('resources/images/banner/banner-example-" + (i + 1) + ".jpg')";
+function Timer(fn, t) {
+    var timerObj = setInterval(fn, t);
+
+    this.stop = function() {
+        if (timerObj) {
+            clearInterval(timerObj);
+            timerObj = null;
+        }
+        return this;
+    }
+
+    // start timer using current settings (if it's not already running)
+    this.start = function() {
+        if (!timerObj) {
+            this.stop();
+            timerObj = setInterval(fn, t);
+        }
+        return this;
+    }
+
+    // start with new interval, stop current interval
+    this.reset = function(newT) {
+        t = newT;
+        return this.stop().start();
+    }
 }
 
-var banner = document.querySelector(".banner");
-var bannerTexts = document.querySelectorAll(".banner-text");
+var slides = document.querySelectorAll(".banner-img");
+var texts = document.querySelectorAll(".banner-text")
 var buttons = document.querySelectorAll(".banner-button");
 
-var currentSlide;
 var canChange = true;
-var interval;
+var currentSlide = 0;
+var autoChangeTime = 7000; //Tempo em ms para a troca de slides
 
-changeSlide(1);
+resetSlide(1);
 
-// function changeTimer(time) {
-//     window.clearTimeout();
-//     window.setTimeout(function() {
-//         if(!canChange) return;
-//         currentSlide++;
-//         if(currentSlide > 3) currentSlide = 1;
-//         changeSlide(currentSlide);
-//     }, time);    
-// }
-
-function changeSlide(s) {
+var slideTimer = new Timer(function() {
     if(!canChange) return;
-    canChange = false;
-    
-    currentSlide = s;
-    n = (parseInt(s) - 1);
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].style.backgroundColor = "gray";
-        bannerTexts[i].style.display = "none";
-        bannerTexts[i].style.opacity = 0;
+    currentSlide++;
+    if(currentSlide >= slides.length) {
+        changeSlide(0);
     }
-    banner.style.backgroundImage = "url('resources/images/banner/banner-example-" + s + ".jpg')";
-    bannerTexts[n].style.display = "inherit";
-    bannerTexts[n].style.opacity = 1;
+    else {
+        changeSlide(currentSlide);
+    }
+}, autoChangeTime);
 
+function resetSlide(resetIni) { //use 0 para resetar tudo, use 1 para ignorar o primeiro slide
+    for (let i = resetIni; i < slides.length; i++) {
+        slides[i].style.opacity = 0;
+        texts[i].style.opacity = 0;
+        buttons[i].style.backgroundColor = "gray";
+        console.log(slides[i]);
+    }
+}
+
+function changeSlide(n) {
+    canChange = false;
+    currentSlide = n;
+    resetSlide(0);
+    slides[n].style.opacity = 1;
+    texts[n].style.opacity = 1;
     buttons[n].style.backgroundColor = "#ff2020";
     changeDelay();
 }
 
-function changeDelay() {
-    // slideTimer(7000);
+function changeDelay() { //Cooldown para trocar os slides
     window.setTimeout(function(){
         canChange = true;
-
-    }, 1000);
+        slideTimer.reset(autoChangeTime);
+    }, 800);
 }
 
-//<body onload= "função()"> no html pode ser útil
+for (let i = 0; i < buttons.length; i++) { //Adicionando os eventos
+    const element = buttons[i];
+    element.addEventListener("click", function() {
+        if(!canChange) return;
+        slideTimer.stop();
+        changeSlide(i);
+    }, false);
+}
