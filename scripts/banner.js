@@ -51,7 +51,6 @@ function resetSlide(resetIni) { //use 0 para resetar tudo, use 1 para ignorar o 
         slides[i].style.opacity = 0;
         texts[i].style.opacity = 0;
         buttons[i].style.backgroundColor = "gray";
-        console.log(slides[i]);
     }
 }
 
