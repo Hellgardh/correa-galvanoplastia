@@ -517,7 +517,7 @@ a:visited {
 }
 
 .setor {
-  width: 160px;
+  width: 190px;
   height: 180px;
   padding: 20px;
   margin-bottom: 55px;
@@ -649,6 +649,14 @@ footer {
 .ft-social .ft-icon {
   width: inherit;
   height: inherit;
+}
+
+#fb-icon:hover {
+  color: #29487D;
+}
+
+#linkedin-icon:hover {
+  color: #0E76A8;
 }
 
 /* External */
@@ -788,8 +796,8 @@ footer {
 
   .setor-content {
     margin: 0 20px;
-    width: 180px;
-    min-width: 180px;
+    width: 190px;
+    min-width: 190px;
     height: 180px;
   }
 
@@ -892,6 +900,10 @@ footer {
     padding-top: 5px;
     width: 40px;
     height: 40px;
+  }
+
+  .ft-social .ft-icon {
+    font-size: 40px;
   }
 }
 
@@ -1002,6 +1014,10 @@ footer {
     padding-top: 5px;
     width: 40px;
     height: 40px;
+  }
+
+  .ft-social .ft-icon {
+    font-size: 40px;
   }
 
   #mail-ft {
@@ -1171,6 +1187,7 @@ footer {
 
   .ft-social .ft-icon {
     padding-top: 8px;
+    font-size: 50px;
   }
 
   #mail-ft {
