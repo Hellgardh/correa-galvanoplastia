@@ -201,6 +201,11 @@ a:visited {
   -ms-flex-align: center;
   align-items: center;
   z-index: 11;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
 .line {
@@ -210,8 +215,9 @@ a:visited {
   margin: 6% 0;
   -webkit-transition: opacity 0.15s linear, -webkit-transform 0.3s linear 0.15s;
   transition: opacity 0.15s linear, -webkit-transform 0.3s linear 0.15s;
-  transition: transform 0.3s linear 0.15s, opacity 0.15s linear;
-  transition: transform 0.3s linear 0.15s, opacity 0.15s linear,
+  -o-transition: opacity 0.15s linear, transform 0.3s linear 0.15s;
+  transition: opacity 0.15s linear, transform 0.3s linear 0.15s;
+  transition: opacity 0.15s linear, transform 0.3s linear 0.15s,
     -webkit-transform 0.3s linear 0.15s;
 }
 
@@ -243,6 +249,7 @@ a:visited {
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-transition: left 0.3s ease-in;
+  -o-transition: left 0.3s ease-in;
   transition: left 0.3s ease-in;
 }
 
@@ -251,6 +258,7 @@ a:visited {
   top: 0%;
   margin-left: 5%;
   -webkit-transition: opacity 0.3s linear 0.4s;
+  -o-transition: opacity 0.3s linear 0.4s;
   transition: opacity 0.3s linear 0.4s;
 }
 
@@ -264,25 +272,30 @@ a:visited {
   text-align: center;
   border-bottom: 8px solid;
   border-color: rgba(0, 0, 0, 0);
+  -webkit-transition: background-color 0.2s linear, border-bottom 0.2s linear,
+    -webkit-transform 0.2s linear;
+  transition: background-color 0.2s linear, border-bottom 0.2s linear,
+    -webkit-transform 0.2s linear;
+  -o-transition: background-color 0.2s linear, border-bottom 0.2s linear,
+    transform 0.2s linear;
+  transition: background-color 0.2s linear, border-bottom 0.2s linear,
+    transform 0.2s linear;
+  transition: background-color 0.2s linear, border-bottom 0.2s linear,
+    transform 0.2s linear, -webkit-transform 0.2s linear;
 }
-
-/* .side-bar-item:hover {
-  color: #b00320;
-  border-color: #b00320;
-  transform: scale(1.1);
-} */
 
 .side-bar-item:hover {
   background-color: #b00320;
-  -webkit-transition: background-color 0.2s linear, border-bottom, 0.2s linear,
+  /* -webkit-transition: background-color 0.2s linear, border-bottom, 0.2s linear,
     0.2s linear, -webkit-transform;
   transition: background-color 0.2s linear, border-bottom, 0.2s linear,
     0.2s linear, -webkit-transform;
   transition: background-color 0.2s linear, border-bottom, 0.2s linear,
     transform, 0.2s linear;
   transition: background-color 0.2s linear, border-bottom, 0.2s linear,
-    transform, 0.2s linear, -webkit-transform;
+    transform, 0.2s linear, -webkit-transform; */
   -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
   transform: scale(1.1);
   border-bottom: 8px solid #9b021b;
 }
@@ -293,15 +306,13 @@ a:visited {
 
 .menu-button.active:hover {
   -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
   transform: scale(1.2);
-  -webkit-transition: 0.2s linear, -webkit-transform;
-  transition: 0.2s linear, -webkit-transform;
-  transition: transform, 0.2s linear;
-  transition: transform, 0.2s linear, -webkit-transform;
 }
 
 .menu-button.active .line:nth-child(1) {
   -webkit-transform: rotate(-45deg) translateY(11px) translateX(-4.5px);
+  -ms-transform: rotate(-45deg) translateY(11px) translateX(-4.5px);
   transform: rotate(-45deg) translateY(11px) translateX(-4.5px);
 }
 
@@ -311,6 +322,7 @@ a:visited {
 
 .menu-button.active .line:nth-child(3) {
   -webkit-transform: rotate(45deg) translateY(-11px) translateX(-4.5px);
+  -ms-transform: rotate(45deg) translateY(-11px) translateX(-4.5px);
   transform: rotate(45deg) translateY(-11px) translateX(-4.5px);
 }
 
@@ -339,6 +351,7 @@ a:visited {
   border-color: red;
   cursor: pointer;
   -webkit-transition: background-color 0.8s ease-in-out;
+  -o-transition: background-color 0.8s ease-in-out;
   transition: background-color 0.8s ease-in-out;
 }
 
@@ -402,6 +415,7 @@ a:visited {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transition: opacity 0.8s ease-in;
+  -o-transition: opacity 0.8s ease-in;
   transition: opacity 0.8s ease-in;
 }
 
@@ -421,6 +435,7 @@ a:visited {
   /* -webkit-animation: fadeIn 1s ease-in 0.5s;
   animation: fadeIn 1s ease-in 0.5s; */
   -webkit-transition: opacity 0.8s ease-in;
+  -o-transition: opacity 0.8s ease-in;
   transition: opacity 0.8s ease-in;
 }
 
@@ -453,6 +468,7 @@ a:visited {
   -webkit-transition: -webkit-transform 0.2s linear,
     -webkit-box-shadow 0.2s linear;
   transition: -webkit-transform 0.2s linear, -webkit-box-shadow 0.2s linear;
+  -o-transition: transform 0.2s linear, box-shadow 0.2s linear;
   transition: transform 0.2s linear, box-shadow 0.2s linear;
   transition: transform 0.2s linear, box-shadow 0.2s linear,
     -webkit-transform 0.2s linear, -webkit-box-shadow 0.2s linear;
@@ -461,6 +477,7 @@ a:visited {
 .home-link h2 {
   padding: 0 10px;
   -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
@@ -475,7 +492,7 @@ a:visited {
 }
 
 #orcamento {
-  background: url("images/home-menu/Orcamento.jpg") no-repeat center;
+  background: url("images/home-menu/Orcamento.jpg") no-repeat bottom;
   background-size: cover;
 }
 
@@ -669,42 +686,6 @@ footer {
   right: 0;
 }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 @media screen and (max-width: 599px) {
   /* Phone Only */
   h1 {
@@ -745,10 +726,11 @@ footer {
     height: 80px;
     margin: 2px 0;
     font-size: 26px;
+    padding-top: 8px;
   }
 
-  .home-link {
-    padding-top: 8px;
+  .home-link:hover h2 {
+    padding-bottom: 10px;
   }
 
   #quem-somos {
@@ -795,6 +777,7 @@ footer {
     cursor: grabbing;
     cursor: -webkit-grabbing;
     -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
   }
 
@@ -852,6 +835,7 @@ footer {
     height: 35px;
     margin: 0 50px;
     -webkit-transition: opacity 0.15s linear;
+    -o-transition: opacity 0.15s linear;
     transition: opacity 0.15s linear;
   }
 
@@ -861,8 +845,9 @@ footer {
   }
 
   .setores-ui .arrow:nth-child(1) {
-    transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
   }
 
   .nossos-clientes {
@@ -908,13 +893,6 @@ footer {
     width: 40px;
     height: 40px;
   }
-
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    /* .setores {
-      -webkit-transform: scale(1);
-      transform: scale(1);
-    } */
-  }
 }
 
 @media screen and (min-width: 600px) {
@@ -950,8 +928,12 @@ footer {
     margin: 2px 0;
   }
 
+  .home-link:hover h2 {
+    padding-bottom: 10px;
+  }
+
   .setores {
-    width: 80%;
+    width: 90%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-flow: row wrap;
@@ -961,7 +943,7 @@ footer {
   }
 
   .setor-content {
-    width: 160px;
+    width: 190px;
     height: 160px;
     margin: 60px 30px;
     -ms-flex-pack: distribute;
@@ -979,6 +961,7 @@ footer {
     border-style: solid;
     border-color: rgba(128, 128, 128, 0);
     -webkit-transition: border-color 0.4s ease-in-out;
+    -o-transition: border-color 0.4s ease-in-out;
     transition: border-color 0.4s ease-in-out;
   }
 
@@ -1072,6 +1055,7 @@ footer {
 
   .home-link:hover {
     -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
     -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
