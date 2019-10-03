@@ -13,7 +13,7 @@ function toggleSideBar() {
         button.classList.add("active");
     }
     else {
-        active =false;
+        active = false;
         sideBar.style.left = "-100%";
         brand.style.opacity = 0;
         button.classList.remove("active");

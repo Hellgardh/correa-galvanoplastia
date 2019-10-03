@@ -1,0 +1,113 @@
+#quem-somos {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+section {
+  align-content: center;
+}
+
+section.container {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  width: calc(80% - 40px); /*80% - o valor da margem da .description */
+  margin-bottom: 100px;
+}
+
+section .description {
+  margin: 0 20px;
+  width: 50%;
+  align-self: center;
+}
+
+section img {
+  width: 250px;
+  object-fit: cover;
+}
+
+#ambiental {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#ambiental h1 {
+  width: fit-content;
+  margin: 0 0;
+}
+
+#tree {
+  align-self: center;
+  margin-right: 25px;
+  padding-bottom: 20px;
+  color: rgb(1, 134, 1);
+  font-size: 50px;
+}
+
+#img-sus {
+  height: 300px;
+}
+
+@media screen and (max-width: 599px) {
+  /* Phone Only */
+  section.container {
+    width: 100%;
+    flex-direction: column;
+    font-size: 18px;
+  }
+
+  section .description {
+    width: 90%;
+  }
+
+  section img {
+    order: -1;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  /* Tablet Portrait Up */
+  section.container {
+    width: 100%;
+    flex-direction: column;
+    font-size: 18px;
+  }
+
+  section .description {
+    width: 90%;
+  }
+
+  section img {
+    order: -1;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  /* Tablet Landscape */
+  section.container {
+    width: 90%;
+    flex-direction: row;
+  }
+
+  section .description {
+    width: 90%;
+  }
+
+  section img {
+    order: initial;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* Desktop Up */
+
+}
+
+@media screen and (min-width: 1800px) {
+  /* Big Desktop Up */
+
+}
+
